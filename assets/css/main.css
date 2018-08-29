@@ -2891,6 +2891,31 @@
 				background-color: #4278b8;
 			}
 			
+		input[type="submit"].specialdarkgray,
+		input[type="reset"].specialdarkgray,
+		input[type="button"].specialdarkgray,
+		button.specialdarkgray,
+		.button.specialdarkgray {
+			background-color: #6F6F6F;
+			color: #ffffff !important;
+		}
+
+			input[type="submit"].specialdarkgray:hover,
+			input[type="reset"].specialdarkgray:hover,
+			input[type="button"].specialdarkgray:hover,
+			button.specialdarkgray:hover,
+			.button.specialdarkgray:hover {
+				background-color: #C0C0C0;
+			}
+
+			input[type="submit"].specialdarkgray:active,
+			input[type="reset"].specialdarkgray:active,
+			input[type="button"].specialdarkgray:active,
+			button.specialdarkgray:active,
+			.button.specialdarkgray:active {
+				background-color: #4278b8;
+			}
+			
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
@@ -3032,6 +3057,14 @@
 			#header li a.light:hover{
 				color:#ffffff;
 			}
+			
+			#header li a.lightb{
+				color:#7F7F7F;
+			}
+			
+			#header li a.lightb:hover{
+				color:#000000;
+			}
 		
 		
 		#header li.has-sub {
@@ -3051,6 +3084,14 @@
 			}
 			
 			#header li.has-sub.white:hover {
+				color: #ffffff;
+			}
+			
+			#header li.has-sub.lightb {
+				color: #7F7F7F;
+			}
+			
+			#header li.has-sub.lightb:hover {
 				color: #ffffff;
 			}
 		
@@ -3100,8 +3141,23 @@
 			font-size: .8em;
 		} 
 		
+		#header li.has-sub ul.lightb a{
+			-moz-transition: color 0.2s ease-in-out;
+			-webkit-transition: color 0.2s ease-in-out;
+			-ms-transition: color 0.2s ease-in-out;
+			transition: color 0.2s ease-in-out;
+			display: inline-block;
+			padding: 0 0.75em;
+			color: #7F7F7F;
+			text-decoration: none;
+			font-size: .8em;
+		} 
+		
 		#header li.has-sub ul.lwhite a:hover{
 			color: #505050;
+		}
+		#header li.has-sub ul.lightb a:hover{
+			color: #ffffff;
 		}
 			
 /*done*/
@@ -3330,22 +3386,33 @@
 		text-align: center;
 		border-top: 0.5em solid #5385c1;
 	}
-
+	
 	#bannerpub {
-		padding: 18em 0 0em 0;
-		/*background-size: cover;*/
-    background-size: 100%;
+		padding: 20em 0 0em 0;
+		background-size: 100%;
     background-image: url('../../images/tables.jpg');
 		background-position: top;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
+		text-align: center;
 		border-top: 0.5em solid #5385c1;
-	}
-	
+	  }
+
 	#bannerres {
 		padding: 18em 0 0em 0;
 		background-size: 100%;
     background-image: url('../../images/lindis3.jpg');
+		background-position: top;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		text-align: center;
+		border-top: 0.5em solid #5385c1;
+	}
+	
+	#bannerdiss {
+		padding: 18em 0 0em 0;
+		background-size: 100%;
+    background-image: url('../../images/tuscany.jpg');
 		background-position: top;
 		background-attachment: fixed;
 		background-repeat: no-repeat;
@@ -3379,9 +3446,10 @@
 			font-weight: 100;
 			color: #fff;
 			line-height: 1em;
-			margin: 0.5em 0 0.2em 0;
+			margin: 0 0 0.5em 0;
 			padding: 0;
 		}
+		
 		#bannerres h1 {
 			font-size: 3.5em;
 			font-weight: 100;
@@ -3390,6 +3458,16 @@
 			margin: 0.5em 0 0.2em 0;
 			padding: 0;
 		}
+		
+		#bannerdiss h1 {
+			font-size: 3.5em;
+			font-weight: 100;
+			color: #fff;
+			line-height: 1em;
+			margin: 0.5em 0 0.2em 0;
+			padding: 0;
+		}
+		
 		#bannerrcourse h1 {
 			font-size: 3.5em;
 			font-weight: 100;
@@ -3407,6 +3485,15 @@
 			margin-bottom: 1em;
 			vertical-align: bottom;
 		}
+		#bannerpub p {
+			text-align: left;
+			font-size: 1em;
+			color: rgba(255, 255, 255, 0.55);
+			position: relative;
+			margin-left: 1em;
+			margin-bottom: 1em;
+			vertical-align: bottom;
+		}
 		#bannerres p {
 			text-align: left;
 			font-size: 1em;
@@ -3416,7 +3503,8 @@
 			margin-bottom: 1em;
 			vertical-align: bottom;
 		}
-		#bannerpub p {
+		
+		#bannerdiss p {
 			text-align: left;
 			font-size: 1em;
 			color: rgba(255, 255, 255, 0.55);
@@ -3452,17 +3540,11 @@
 			#banner {
 				padding: 18em 2em 0em 2em;
 			}
-			#bannerpub {
-				padding: 16em 2em 0em 2em;
-			}
 		}
 
 		@media screen and (max-width: 980px) {
 
 			#banner {
-				background-attachment: scroll;
-			}
-			#bannerpub {
 				background-attachment: scroll;
 			}
 		}
@@ -3480,17 +3562,6 @@
 				#banner p {
 					font-size: .9em;
 				}
-			#bannerpub {
-				padding: 12em 1.5em 0em 1.5em;
-			}
-
-				#bannerpub h1 {
-					font-size: 2.5em;
-				}
-
-				#bannerpub p {
-					font-size: .9em;
-				}
 
 		}
 
@@ -3499,9 +3570,7 @@
 			#banner {
 				padding: 10em 1.5em 0em 1.5em;
 			}
-			#bannerpub {
-				padding: 8em 1.5em 0em 1.5em;
-			}
+
 		}
 
 /* Footer */
